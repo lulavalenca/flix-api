@@ -33,6 +33,12 @@ class MovieModelSerializer(serializers.ModelSerializer):
         return value
 
 
+class MovieListDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Movie
+        fields = "__all__"
+
+
 class MovieStatsSerializer(serializers.Serializer):
     total_movies = serializers.IntegerField()
     movies_by_genre = serializers.ListField()
