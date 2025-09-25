@@ -7,17 +7,36 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Actor',
+            name="Actor",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200)),
-                ('birthday', models.DateField(blank=True, null=True)),
-                ('nationality', models.CharField(blank=True, choices=[('BR', 'Brasil'), ('USA', 'Estados Unidos'), ('UK', 'Reino Unido')], max_length=100, null=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                ("birthday", models.DateField(blank=True, null=True)),
+                (
+                    "nationality",
+                    models.CharField(
+                        blank=True,
+                        choices=[
+                            ("BR", "Brasil"),
+                            ("USA", "Estados Unidos"),
+                            ("UK", "Reino Unido"),
+                        ],
+                        max_length=100,
+                        null=True,
+                    ),
+                ),
             ],
         ),
     ]

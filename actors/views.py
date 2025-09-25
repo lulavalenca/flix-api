@@ -4,9 +4,8 @@ from actors.models import Actor
 from actors.serializers import ActorSerializer
 
 
-
 class ActorCreateListView(generics.ListCreateAPIView):
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated,)
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
 
@@ -14,5 +13,3 @@ class ActorCreateListView(generics.ListCreateAPIView):
 class ActorRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
-
-
